@@ -1,0 +1,170 @@
+/*
+FILE NAME: starry_terminal.css
+WRITTEN BY: Yuril
+WHEN: 2022-05-19 - present
+PURPOSE: Space-themed stylesheet
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=IBM+Plex+Mono&family=IBM+Plex+Sans&family=Noto+Sans:wght@300&display=swap');
+@import url("/fonts/futura-lt/style.css");
+
+:root {
+  --yRed: #F20401;
+  --yYel: #FECB10;
+  --yPur: #7C0944;
+}
+
+html {
+  padding: 16px;
+}  
+
+body {
+  background-image: url(/img/starry-night.jpg);
+  /* background image credit: https://www.deviantart.com/followingstars/art/Simple-starry-background-193403007 */
+  background-color: black;
+  background-color: rgba(0,0,0,0.8);
+  background-blend-mode: darken;
+  color: var(--yRed);
+  font-family: "IBM Plex Mono", monospace;
+  max-width: 800px;
+  margin: auto;
+}
+
+header table {
+  border: 2px solid var(--yRed);
+  border-collapse: collapse;
+  padding: 0px;
+  font-size: 36px;
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 0.75;
+  text-align: center;
+  margin: 8px;
+}
+
+header table img {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  text-align: center;
+}
+
+header a {
+  color: var(--yRed);
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+header table td {
+  padding: 0px;
+  width: 100px;
+}
+
+nav {
+  margin-bottom: 1em;
+  overflow: hidden; /* Expand to fit the floating block links */
+  /* font-weight: bold; */
+  text-align: center;
+  
+  /* Create a red line at the bottom (of the navigation bar): */
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: var(--yRed);
+}
+
+nav a {
+  border-style: solid;
+  border-color: var(--yRed);
+  color: var(--yRed);
+  border-width: 1px;
+  text-decoration: none;
+  text-align:center;
+  font-family: "Futura LT Book", sans-serif;
+  padding: 0.5em;
+  display: inline-block; /* Because we want each link to act like a floating block */
+  /*margin: 0.5em;*/
+  margin-bottom: 0.5em;
+}
+
+nav a:hover {
+  background-color: var(--yPur);
+}
+
+main {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 16px;
+}
+
+main table, main th, main td {
+  border: 3px solid var(--yRed);
+  border-collapse: collapse;
+  padding: 8px;
+  border-style: dashed;
+  text-align: center;
+}
+
+main figure {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+
+main figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding-top: 0.5ch;
+  padding-left: 4ch;
+  padding-right: 4ch;
+  text-align: center;
+}
+
+main table {
+  margin: auto;
+}
+
+main table th {
+  font-weight: bold;
+}
+
+main p, main li {
+  font-size: 16px;
+  margin-left: 16px;
+}
+
+main p {
+  text-indent: 4ch;
+}
+
+main a {
+  color: var(--yRed);
+}
+
+main ul {
+  list-style: none;
+  padding: 0px;
+  text-indent: -41.5px;
+  padding-left: 41.5px;
+}
+
+main ul li:before {
+  content: '-';
+  margin: 0 1em;    /* any design */
+}
+
+footer {
+  margin-top: 1.5em;
+  padding-top: 0.5em;
+  text-align: center;
+  
+  /* Create a red line at the top (of the footer): */
+  border-top-style: solid;
+  border-top-color: var(--yRed);
+  border-top-width: 2px;
+}
+
+footer a {
+  text-decoration: none; /* Get rid of the underline that is on hyperlinks by default */
+}
