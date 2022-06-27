@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+FILE NAME: guestbook.html
+WRITTEN BY: Yuril
+WHEN: 2022-05-17 - present
+PURPOSE: Guestbook where people can leave messages
+
+MODIFICATION HISTORY:
+2022-05-17 File created; initial modifications made
+-->
+<html lang=en>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuril's Guestbook</title>
+    <link href="/css/starry_terminal.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> 
+      $(function(){
+        $("#header").load("header.html"); 
+        $("#footer").load("footer.html");
+      });
+    </script> 
+    <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="https://yuril.123guestbook.com/">
+  </head>
+  <body>
+    
+    <div id="header"></div>
+    
+    <main>
+      <h1>Guestbook</h1>
+  
+      <iframe id="guestbookFrame" style="width:100%; height:1000px;" src="https://yuril.123guestbook.com/" frameborder="0" onload="resizeIframe(this)"></iframe>
+      
+    </main>
+      
+    <div id="footer"></div>
+  </body>
+</html>
