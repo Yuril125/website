@@ -115,7 +115,7 @@ main {
 }
 
 main h1 {
-  margin: 16px auto;
+  margin: 48px auto 16px auto;
   padding: 0 0.35ch;
   width:fit-content;
   text-align:center;
