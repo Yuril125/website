@@ -6,78 +6,110 @@ WHEN: 2022-05-15 - present
 PURPOSE: Some information about Yuril
 -->
 <html lang=en>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Yuril</title>
-    <link href="/css/starry_terminal.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-      $(function(){
-        $("#header").load("header.html");
-        $("#footer").load("footer.html");
-      });
-    </script>
-  </head>
-  <body>
 
-    <div id="header"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Yuril</title>
+  <link href="/css/starry_terminal.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
 
-    <main>
+    document.addEventListener("DOMContentLoaded", function () {
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      const currentMonth = now.getMonth();
+      const currentDay = now.getDate();
 
-      <h1>About Yuril</h1>
+      let yearsPassed = currentYear - 2005;
+      if (currentMonth <= 0 && currentDay < 25) {
+        yearsPassed--;
+      }
 
-      <p>Hello! I am called <strong>Yuril</strong> <small>(<a target="_blank" href="https://en.wikipedia.org/wiki/Help:IPA">IPA</a>: [ˈjyɹɪl])</small>, though you may also see me being called <span style="font-family:sans-serif">挧日</span> <small>(<a target="_blank" href="https://en.wikipedia.org/wiki/Pinyin">pinyin</a>: yǔrì)</small>. I am a Brown University student, programmer, <a href=https://www.oreilly.com/openbook/freedom/appb.html>hacker</a>, engineer, libertarian socialist, and furry.</p>
+      document.getElementById("age").innerHTML = yearsPassed;
+    });
+  </script>
+</head>
 
-      <ul>
-        <li><strong>Age: </strong>18 years</li>
-        <li><strong>Neurotype: </strong>ADHD + Autism</li>
-        <li><strong>Gender: </strong>Nonbinary</li>
-        <li><strong>Pronouns: </strong>they/them</li>
-        <li><strong>Location: </strong>Rhode Island, United States</li>
-        <li><strong>Languages: </strong>American English (primary), Mandarin Chinese (native), Spanish and Russian (learning)</li>
-        <li><strong>Favorite color: </strong>have a guess</li>
-      </ul>
+<body>
 
-      <h3>Yuril's Interests</h3>
-      <ul>
-        <li>Aviation</li>
-        <li>Math</li>
-        <li>Computer Programming &mdash;<br>&nbsp;&nbsp;&nbsp;&nbsp;Stuff I might consider myself to be "good" at:
-          <ul>
-            <li>C/C++: x86, Arduino, AVR</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>HTML/CSS/Javascript</li>
-          </ul>
-        </li>
-        <li>Electrical/Electronics Engineering, Microcontrollers, Hobby&nbsp;electronics</li>
-        <li>Retro Computing, Web 1.0, Digital minimalism</li>
-        <li>Linux, FLOSS/FOSS</li>
-        <li>Books</li>
-        <li>Furries</li>
-        <li>Linguistics and learning languages, Conlangs, Worldbuilding</li>
-        <li>Vexillology</li>
-        <li>Urbanism & Sustainability</li>
-        <li>Science fiction, Political science fiction</li>
-      </ul>
+  <div id="header"></div>
 
-      <h1>About Yuril (Avali)</h1>
+  <main>
 
-      <figure style="max-width: 600px; height:auto;">
-        <img src="/img/Yuril2.0_discordfriendly@0.5x.png" alt="Yuril Reference Sheet" style="max-width: 100%; height:auto;" />
-        <figcaption><small><i>Artist: <a target="_blank" href="https://www.instagram.com/flavyart10/">Flavy</a></i></small></figcaption>
-      </figure>
+    <h1>About Yuril</h1>
 
-      <p>"Yuril" comes from a truncation of (a concatenation of (an anagram of my (real) first name) and my (real) last name). "<span style="font-family:sans-serif">挧日</span>" comes from a phono-semantic matching of "Yuril". The character "<span style="font-family:sans-serif">挧</span>" is one of the <a href="https://en.m.wikipedia.org/wiki/JIS_X_0208#Kanji_from_unknown_sources">ghost characters</a> which were included in the JIS X 0208 character set (and thus Unicode), but appeared to have no known origin, meaning, or pronunciation in Japanese. In Chinese, however, 挧 is used exclusively as a surname.</p>
-      <p>Yuril's color scheme was largely inspired by the flag of the Second Spanish Republic.</p>
-      <p>Yuril is an <a href="https://avali.fandom.com/">Avali</a>; as a result, he is sized accordingly, considering that an adult Avali is typically 1 m to 1.2 m tall. However, if he is drawn with other, more human-sized characters, his height may be adjusted. His equivalent human height would be 173 cm.</p>
+    <p>Hello! I am called <strong>Yuril</strong> <small>(<a target="_blank"
+          href="https://en.wikipedia.org/wiki/Help:IPA">IPA</a>: [ˈjyɹɪl])</small>, though you may also see me being
+      called <span style="font-family:sans-serif">挧日</span> <small>(<a target="_blank"
+          href="https://en.wikipedia.org/wiki/Pinyin">pinyin</a>: yǔrì)</small>. I am a Brown University student,
+      programmer, <a href=https://www.oreilly.com/openbook/freedom/appb.html>hacker</a>, engineer, libertarian
+      socialist, and furry.</p>
 
-      <h1>About This Website</h1>
+    <ul>
+      <li><strong>Age: </strong><span id="age">$YEAR - 2005</span> years</li>
+      <li><strong>Neurotype: </strong>ADHD + Autism</li>
+      <li><strong>Gender: </strong>Nonbinary</li>
+      <li><strong>Pronouns: </strong>they/them</li>
+      <li><strong>Location: </strong>Rhode Island, United States</li>
+      <li><strong>Languages: </strong>American English (primary), Mandarin Chinese (native), Spanish and Russian
+        (learning)</li>
+      <li><strong>Favorite color: </strong>have a guess</li>
+    </ul>
 
-      <p>This website is on <a href="https://github.com/Yuril125/website">Github</a> and is deployed using <a href="https://github.com/marketplace/actions/deploy-to-neocities">deploy-to-neocities</a>.</p>
-      <!--
+    <h3>Yuril's Interests</h3>
+    <ul>
+      <li>Aviation</li>
+      <li>Math</li>
+      <li>Computer Programming &mdash;<br>&nbsp;&nbsp;&nbsp;&nbsp;Stuff I might consider myself to be "good" at:
+        <ul>
+          <li>C/C++: x86, Arduino, AVR</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>HTML/CSS/Javascript</li>
+        </ul>
+      </li>
+      <li>Electrical/Electronics Engineering, Microcontrollers, Hobby&nbsp;electronics</li>
+      <li>Retro Computing, Web 1.0, Digital minimalism</li>
+      <li>Linux, FLOSS/FOSS</li>
+      <li>Books</li>
+      <li>Furries</li>
+      <li>Linguistics and learning languages, Conlangs, Worldbuilding</li>
+      <li>Vexillology</li>
+      <li>Urbanism & Sustainability</li>
+      <li>Science fiction, Political science fiction</li>
+    </ul>
+
+    <h1>About Yuril (Avali)</h1>
+
+    <figure style="max-width: 600px; height:auto;">
+      <img src="/img/Yuril2.0_discordfriendly@0.5x.png" alt="Yuril Reference Sheet"
+        style="max-width: 100%; height:auto;" />
+      <figcaption><small><i>Artist: <a target="_blank"
+              href="https://www.instagram.com/flavyart10/">Flavy</a></i></small></figcaption>
+    </figure>
+
+    <p>"Yuril" comes from a truncation of (a concatenation of (an anagram of my (real) first name) and my (real) last
+      name). "<span style="font-family:sans-serif">挧日</span>" comes from a phono-semantic matching of "Yuril". The
+      character "<span style="font-family:sans-serif">挧</span>" is one of the <a
+        href="https://en.m.wikipedia.org/wiki/JIS_X_0208#Kanji_from_unknown_sources">ghost characters</a> which were
+      included in the JIS X 0208 character set (and thus Unicode), but appeared to have no known origin, meaning, or
+      pronunciation in Japanese. In Chinese, however, 挧 is used exclusively as a surname.</p>
+    <p>Yuril's color scheme was largely inspired by the flag of the Second Spanish Republic.</p>
+    <p>Yuril is an <a href="https://avali.fandom.com/">Avali</a>; as a result, he is sized accordingly, considering that
+      an adult Avali is typically 1 m to 1.2 m tall. However, if he is drawn with other, more human-sized characters,
+      his height may be adjusted. His equivalent human height would be 173 cm.</p>
+
+    <h1>About This Website</h1>
+
+    <p>This website is on <a href="https://github.com/Yuril125/website">Github</a> and is deployed using <a
+        href="https://github.com/marketplace/actions/deploy-to-neocities">deploy-to-neocities</a>.</p>
+    <!--
       <p>I created this website as a means of having an online presence separate from large social media websites. I see maintaining a personal website like this as beneficial over maintaining a social media profile, especially considering the astounding amount of time that the vast majority of people spend towards social media. </p>
       <ul>
         <li><strong>Learning: </strong>An average internet user spends several hours every day on social media; cumulatively, this adds up to over a thousand hours a year, which makes social media arguably the most time-consuming yet least fulfulling voluntary activity the vast majority of people engage in. Wouldn't this time be much better spent on learning something useful? Everything you see here on this website is 100% hand-coded HTML/CSS. Making a personal website is engineering and art combined into one.</li>
@@ -86,9 +118,10 @@ PURPOSE: Some information about Yuril
       </ul>
       -->
 
-      <small>Last updated: 2023-12-20</small>
+    <small>Last updated: 2023-12-20</small>
 
-    </main>
-    <div id="footer"></div>
-  </body>
+  </main>
+  <div id="footer"></div>
+</body>
+
 </html>
