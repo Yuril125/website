@@ -41,6 +41,44 @@ body {
   margin: auto;
 }
 
+::selection {
+  background-color: var(--yPur);
+}
+
+div.guestbook-box label {
+  display: block;
+}
+
+div.guestbook-box input, div.guestbook-box textarea {
+  background: none;
+  color: var(--yRed);
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 16px;
+  border-width: 2px;
+  border-color: var(--yRed);
+  border-style: solid;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+}
+
+div.guestbook-box input[type=submit]:hover {
+  background-color: var(--yPur);
+}
+
+div.guestbook-box input[type=submit] {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  margin-top: 1ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*
 header table {
   border: 3px outset var(--yRed);
@@ -252,4 +290,33 @@ footer a:not(footer div a) {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   cursor:help;
+}
+
+div.guestbook-box {
+  padding: 1ch;
+  border: 2px solid;
+  overflow: hidden;
+  margin: 1em 0;
+}
+
+div.guestbook-box header, div.guestbook-box label {
+  padding-left: 0.25ch;
+  padding-right: 0.25ch;
+  text-align: left;
+  font-weight: bold;
+}
+
+div.guestbook-box div.time {
+  float: right;
+}
+
+div.guestbook-box hr {
+  background-color: var(--yRed);
+  border-width: 0;
+  height: 2px;
+}
+
+div.guestbook-box div.message {
+  padding-left: 0.25ch;
+  padding-right: 0.25ch;
 }

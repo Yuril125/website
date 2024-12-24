@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "ESNext",
+        "outDir": "public/js",
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+    },
+    "include": ["src/**/*"],
+}

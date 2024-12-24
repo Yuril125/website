@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<!--
-FILE NAME: guestbook.html
-WRITTEN BY: Yuril
-WHEN: 2022-05-17 - present
-PURPOSE: Guestbook where people can leave messages
-
-MODIFICATION HISTORY:
-2022-05-17 File created; initial modifications made
--->
 <html lang=en>
   <head>
     <meta charset="UTF-8">
@@ -21,18 +12,33 @@ MODIFICATION HISTORY:
         $("#header").load("header.html"); 
         $("#footer").load("footer.html");
       });
-    </script> 
-    <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="https://yuril.123guestbook.com/">
+    </script>
+    <script src="js/guestbook.js"></script>
   </head>
   <body>
     
     <div id="header"></div>
     
-    <main>
+    <main id="main">
       <h1>Guestbook</h1>
+
+      <div class="guestbook-box">
+        <form id="entry-form">
+          <label for="entry-name">Name:</label>
+          <input type="text" spellcheck="false" id="entry-name" name="entry-name" required autocomplete="off" maxlength="64">
+          <label for="entry-contact" style="margin-top: 0.5em;">Website/Contact [optional]:</label>
+          <input type="text" spellcheck="false" id="entry-contact" name="entry-contact" autocomplete="off" maxlength="128">
+          <hr>
+          <label for="entry-body">Message:</label>
+          <textarea spellcheck="false" id="entry-body" name="entry-body" rows="4" required maxlength="2000"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+        <span id="submission-status"></span>
+      </div>
+
+      <section id="guestbook-entries">
+      </section>
   
-      <iframe id="guestbookFrame" style="width:100%; height:1000px;" src="https://yuril.123guestbook.com/" frameborder="0" onload="resizeIframe(this)"></iframe>
-      
     </main>
       
     <div id="footer"></div>
