@@ -37,6 +37,7 @@ body {
   animation: backgroundScroll 120s linear infinite;
   color: var(--yRed);
   font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-variant-emoji: text;
   max-width: 800px;
   margin: auto;
 }
