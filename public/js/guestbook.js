@@ -1,7 +1,4 @@
-const GUESTBOOK_URL = "https://vixen.yuril.net/guestbook";
-function timeout(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+const GUESTBOOK_URL = 'https://vixen.yuril.net/guestbook';
 async function fetchGuestbook() {
     try {
         const response = await fetch(GUESTBOOK_URL);
@@ -90,7 +87,7 @@ async function submitHandler(event) {
         console.error('Error submitting the form:', error);
     }
 }
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
     updateGuestbook();
     document.getElementById('entry-form')?.addEventListener('submit', submitHandler);
 });

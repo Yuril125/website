@@ -1,4 +1,4 @@
-const GUESTBOOK_URL = "https://vixen.yuril.net/guestbook";
+const GUESTBOOK_URL = 'https://vixen.yuril.net/guestbook';
 
 type GuestbookEntry = {
   name: string,
@@ -7,10 +7,6 @@ type GuestbookEntry = {
   timestamp: number,
   index: number
 };
-
-function timeout(ms: number) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 async function fetchGuestbook(): Promise<GuestbookEntry[] | undefined> {
   try {
@@ -121,7 +117,7 @@ async function submitHandler(event: SubmitEvent) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
   updateGuestbook();
   document.getElementById('entry-form')?.addEventListener('submit', 
     submitHandler);
