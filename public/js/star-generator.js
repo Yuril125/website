@@ -141,7 +141,7 @@ function render() {
         updateUnivXBound((windowXBound - observerX) / (-observerZ)
             * (univMaxZ - observerZ));
     }
-    windowYBound = $(document).height() / 2;
+    windowYBound = window.innerHeight / 2;
     if (lastWindowYBound !== windowYBound) {
         canvasElt.height = windowYBound * 2;
         canvasOfs.height = windowYBound * 2;
