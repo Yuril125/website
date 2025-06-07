@@ -180,7 +180,9 @@ function render(): void {
     translateY(timeElapsed * MOVE_SPEED);
     drawStarsOffscreen();
     ctx.transferFromImageBitmap(canvasOfs.transferToImageBitmap());
-    requestAnimationFrame(render);
+    if ((window as any)["STATIC_BACKGROUND"] !== true) {
+        requestAnimationFrame(render);
+    }
 }
 
 

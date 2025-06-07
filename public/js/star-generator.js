@@ -155,7 +155,9 @@ function render() {
     translateY(timeElapsed * MOVE_SPEED);
     drawStarsOffscreen();
     ctx.transferFromImageBitmap(canvasOfs.transferToImageBitmap());
-    requestAnimationFrame(render);
+    if (window["STATIC_BACKGROUND"] !== true) {
+        requestAnimationFrame(render);
+    }
 }
 // TODO: Update lastUpdated
 document.addEventListener("DOMContentLoaded", function () {
