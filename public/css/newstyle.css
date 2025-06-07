@@ -1,0 +1,284 @@
+/*
+FILE NAME: starry_terminal.css
+WRITTEN BY: Yuril
+WHEN: 2022-05-19 - present
+PURPOSE: Space-themed stylesheet
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=IBM+Plex+Mono&family=IBM+Plex+Sans&family=Noto+Sans:wght@300&display=swap');
+@import url("/fonts/futura-lt/style.css");
+
+:root {
+  --yRed: #F20401;
+  --yYel: #FECB10;
+  --yPur: #7C0944;
+}
+
+html {
+  padding: 16px;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: var(--yRed);
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-variant-emoji: text;
+  max-width: 800px;
+  margin: auto;
+}
+
+#background-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+::selection {
+  background-color: var(--yPur);
+}
+
+div.guestbook-box label {
+  display: block;
+}
+
+div.guestbook-box input, div.guestbook-box textarea {
+  background: none;
+  color: var(--yRed);
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 16px;
+  border-width: 2px;
+  border-color: var(--yRed);
+  border-style: solid;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+}
+
+div.guestbook-box input[type=submit]:hover {
+  background-color: var(--yPur);
+}
+
+div.guestbook-box input[type=submit] {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  margin-top: 1ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header img {
+  width: 206px;
+  margin: 8px;
+}
+
+header table td {
+  padding: 0;
+  width: 100px;
+}
+
+header {
+  text-align: center;
+}
+
+header a {
+  color: var(--yRed);
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+nav {
+  overflow: hidden; /* Expand to fit the floating block links */
+  /* font-weight: bold; */
+  text-align: center;
+}
+
+nav a {
+  border-style: outset;
+  border-color: var(--yRed);
+  color: var(--yRed);
+  border-width: 2px;
+  text-decoration: none;
+  text-align:center;
+  font-family: "Futura LT Regular", sans-serif;
+  text-transform: uppercase;
+  padding: 0.5em;
+  display: inline-block; /* Because we want each link to act like a floating block */
+  /*margin: 0.5em;*/
+  margin-bottom: 0.5em;
+}
+
+nav a:hover {
+  background-color: var(--yPur);
+}
+
+main {
+  padding: 16px 4ch;
+  background-color: black;
+  background-color: rgba(0,0,0,0.5);
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: var(--yRed);
+}
+
+main h1 {
+  margin: 48px auto 16px auto;
+  padding: 0 0.35ch;
+  width:fit-content;
+  text-align:center;
+  border: solid 2px;
+  font-size: 2em;
+}
+
+main h1:first-child {
+  margin-top:0;
+}
+
+main h2 {
+  margin-bottom: 8px;
+  padding: 0 0.35ch;
+  width:fit-content;
+  text-align:center;
+  border: solid 2px;
+  font-size: 1.5em;
+}
+
+main h3 {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+main table, main th, main td {
+  border: 3px solid var(--yRed);
+  border-collapse: collapse;
+  padding: 8px;
+  border-style: dashed;
+  text-align: center;
+}
+
+main figure {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+
+main figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding-top: 0.5ch;
+  padding-left: 4ch;
+  padding-right: 4ch;
+  text-align: center;
+}
+
+main table {
+  margin: auto;
+}
+
+main table th {
+  font-weight: bold;
+}
+
+main p, main li {
+  font-size: 16px;
+  margin-left: 16px;
+}
+
+main a {
+  color: var(--yRed);
+}
+
+main p {
+  margin-left:0;
+}
+
+main ul {
+  list-style: '- ';
+  margin-top: 0;
+}
+
+main dl {
+  margin-bottom: 32px;
+}
+
+main dt {
+  font-weight:bold;
+}
+
+main dd {
+  margin-bottom: 8px;
+}
+
+footer {
+  padding-top: 0.5em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer a:not(footer div a) {
+  text-decoration: none; /* Get rid of the underline that is on hyperlinks by default */
+  display:inline-block;
+  margin-bottom:4px;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 16px 2ch;
+  }
+}
+
+@media only screen and (max-width: 422px) {
+  footer {
+    width: 250px;
+  }
+}
+
+
+@keyframes firefoxSwitch {
+  0% {content:url("/img/bestviewed.png");}
+  100% {content:url("/img/firefox4.png");}
+}
+
+.firefox {
+  animation-name: firefoxSwitch;
+  animation-duration: 4.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  cursor:help;
+}
+
+div.guestbook-box {
+  padding: 1ch;
+  border: 2px solid;
+  overflow: hidden;
+  margin: 1em 0;
+}
+
+div.guestbook-box header, div.guestbook-box label {
+  padding-left: 0.25ch;
+  padding-right: 0.25ch;
+  text-align: left;
+  font-weight: bold;
+}
+
+div.guestbook-box div.time {
+  float: right;
+}
+
+div.guestbook-box hr {
+  background-color: var(--yRed);
+  border-width: 0;
+  height: 2px;
+}
+
+div.guestbook-box div.message {
+  padding-left: 0.25ch;
+  padding-right: 0.25ch;
+}
